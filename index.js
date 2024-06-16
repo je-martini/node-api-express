@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json())
 
-const whitelist = ['https://je-martini.github.io/intro-react-vite/']
+const whitelist = ['https://je-martini.github.io/intro-react-vite/', 'https://node-api-express-nine.vercel.app/']
 const options = {
   origin: (origin, callback) => {
     if(whitelist.includes(origin) || !origin){

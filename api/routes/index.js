@@ -1,6 +1,8 @@
 const productsRouter = require('./products.router')
-const usersRouter = require('./user.router');
 const categoriesRouter = require('./categories.router');
+const usersRouter = require('./user.router');
+const customersRouter = require('./customer.router')
+const orderRouter = require('./orders.router')
 const express = require('express');
 const { faker } = require('@faker-js/faker')
 
@@ -11,8 +13,11 @@ function routerApi(app) {
   app.use('/api/v1', router);
 
   router.use('/products', productsRouter);
-  router.use('/user', usersRouter);
   router.use('/categories', categoriesRouter);
+  router.use('/users', usersRouter);
+  router.use('/customers', customersRouter)
+  router.use('/orders', orderRouter);
+
 
 }
 
